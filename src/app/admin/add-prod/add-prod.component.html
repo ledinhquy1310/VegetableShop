@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Add Product</h2>
+    <form (submit)="addProduct()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" [(ngModel)]="product.description"
+                required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.price" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Product Image:</label>
+            <input type="file" class="form-control-file" id="image" name="image" (change)="handleImageInput($event)">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()">Add Product</button>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+<div *ngIf="cart && cart.items.length > 0" class="container">
+    <h2>Hóa Đơn Thanh Toán</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li *ngFor="let cartItem of cart.items" class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img [src]="cartItem.product.img" [alt]="cartItem.product.name" class="img-fluid"
+                                style="max-height: 100px;">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="mb-1">{{ cartItem.product.name }}</h5>
+                            <p class="mb-1">Tổng Số Lượng: {{ cartItem.quantity }}</p>
+                            <p class="mb-1">Tổng Tiền: {{ cartItem.product.price * cartItem.quantity| number:'.0-3'
+                                }}đ
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thông tin người đặt hàng</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Tên</label>
+                            <input type="text" class="form-control" id="name" [(ngModel)]="userName" name="name"
+                                disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại</label>
+                            <input type="tel" class="form-control" id="phone" [(ngModel)]="userPhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ </label>
+                            <input style="height: 50px;" type="text" class="form-control" id="address" name="address"
+                                [(ngModel)]="address" placeholder="Vui lòng nhập địa chỉ giao hàng!">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng cộng</h5>
+                    <p class="card-text">Tổng giá tiền: {{ cart.totalPrice| number:'.0-3' }}đ</p>
+                    <button class="btn btn-success mt-3" [disabled]="!address" (click)="Order()">Đặt Hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cart && cart.items.length === 0" class="container">
+    <p class="text-center">Không có sản phẩm trong đơn hàng!</p>
+</div>
+
+<div *ngIf="orderSuccess" class="modal-wrapper">
+    <div class="modal-content">
+        <span class="close-button" routerLink="/">&times;</span>
+        <i class="fa-regular fa-circle-check" style="color: #15f930;"></i>
+        <h2>Đặt hàng thành công!</h2>
+    </div>
+</div>

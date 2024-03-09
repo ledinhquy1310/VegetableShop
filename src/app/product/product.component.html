@@ -1,0 +1,20 @@
+<app-search style="text-align: center;"></app-search>
+<div class="container text-center">
+    <h3 class="pb-3 pt-3">Sản Phẩm</h3>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let product of products; let i = index" [ngClass]="{'active': i === 0}">
+            <div class="card products" routerLink="/product/{{product.id}}">
+                <div class="card-header">
+                    <h3>{{product.name}}</h3>
+                </div>
+                <div class="card-body"><img src="{{product.img}}"></div>
+                <div class="card-footer">
+                    <h4>
+                        {{product.price| number:'.0-3'}}đ
+                    </h4>
+                    <button class="btn btn-success">Xem chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

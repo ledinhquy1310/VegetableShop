@@ -1,0 +1,40 @@
+<div *ngIf="cart && cart.items.length >0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.product.img" [alt]="cartItem.product.name">
+            </div>
+            <div>
+                <a routerLink="/product/{{cartItem.product.id}}">
+                    {{cartItem.product.name}}
+                </a>
+            </div>
+            <div>
+                <input type="number" #quantityInput [value]="cartItem.quantity"
+                    (change)="changeQuantity(cartItem, quantityInput.value)" min="0">
+            </div>
+            <div>
+                {{(cartItem.product.price * cartItem.quantity) | number:'.0-3' }}đ
+            </div>
+
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)">
+                    Remove
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="products-count">{{cart.items.length}}</div>
+            <div class="total-price">{{cart.totalPrice| number:'.0-3' }}đ</div>
+        </div>
+        <div>
+            <button routerLink="/order" class="btn btn-success">Đặt Hàng</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="cart && cart.items.length === 0" class="container">
+    <p>Không có sản phẩm trong giỏ hàng !</p>
+</div>

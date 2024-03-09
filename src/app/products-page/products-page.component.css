@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.container>* {
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.product-image {
+    width: 25%;
+    /* Kích thước cố định cho hình ảnh */
+    border-radius: 3rem;
+    object-fit: cover;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.details {
+    flex: 1;
+    /* Phần còn lại chiếm toàn bộ phần còn lại của container */
+    display: flex;
+    flex-direction: column;
+    border-radius: 3rem;
+    padding: 2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.details .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.details .description {
+    margin-top: 1rem;
+}
+
+.details .description p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.details .price {
+    font-size: 1.8rem;
+    margin: 2rem 2rem 2rem 0;
+    color: green;
+}
+
+.details .price::before {
+    content: "Price: ";
+    color: darkgrey;
+}
+
+.details button {
+    color: white;
+    background: green;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 10rem;
+    outline: none;
+}
+
+.details button:hover {
+    opacity: .9;
+    cursor: pointer;
+}

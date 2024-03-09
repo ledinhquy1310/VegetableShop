@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Cà Rốt Đà Lạt",
+      "description": "Cà Rốt Đà Lạt",
+      "price": 12000,
+      "img": "../assets/img/1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Bí Ngòi Xanh",
+      "description": "Bí Ngòi Xanh",
+      "price": 34000,
+      "img": "../assets/img/2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Cải Thảo Đà Lạt",
+      "description": "Cải Thảo Đà Lạt",
+      "price": 28000,
+      "img": "../assets/img/3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Củ Gừng",
+      "description": "Củ Gừng nhà trồng chứ không ở Đà Lạt",
+      "price": 45000,
+      "img": "../assets/img/4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Ớt Chuông",
+      "description": "Ớt đèn giao thông",
+      "price": 55000,
+      "img": "../assets/img/5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Cải Bó Xôi",
+      "description": "Không dùng để bó xôi",
+      "price": 25000,
+      "img": "../assets/img/6.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Xà Lách Mỹ",
+      "description": "Mỹ Tho hay Mỹ Quý gì đó chứ không phải America",
+      "price": 100000,
+      "img": "../assets/img/7.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Khổ qua",
+      "description": "Ăn vô thì vẫn khổ thôi chứ không có qua ",
+      "price": 30000,
+      "img": "../assets/img/8.jpg"
+    }
+  ],
+  "Users": [
+    {
+      "id": "1",
+      "name": "quy",
+      "email": "admin@localhost.com",
+      "phone": "04358638404",
+      "pass": "123456789"
+    },
+    {
+      "id": "4d65",
+      "name": "quy",
+      "email": "dinhquyle1055@gmail.com",
+      "phone": "04358638404",
+      "password": "123456789"
+    },
+    {
+      "id": "8edc",
+      "name": "quyle",
+      "email": "quyle@gmail.com",
+      "phone": "04358638404",
+      "password": "123456789"
+    },
+    {
+      "id": "6aeb",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "phone": "123456789",
+      "password": "123456789",
+      "role": "admin"
+    },
+    {
+      "id": "ca98",
+      "name": "quy",
+      "email": "quylele@gmail.com",
+      "phone": "4358638404",
+      "password": "123456789"
+    }
+  ]
+}
